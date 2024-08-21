@@ -15,4 +15,8 @@ class AgendaContatos:
         if not self.contatos:
             print("Nenhum contato encontrado.")
         for contato in self.contatos:
-            print(contato)        
+            print(contato)   
+
+    def excluir_contato(self, nome):
+        """Excluí contato com base no nome selecionado"""
+        self.contatos = [contato for contato in self.contatos if contato.nome != nome]

@@ -26,4 +26,13 @@ class Menu:
                 self.agenda.visualizar_contatos()
 
             elif opcao == "3":
-                    
+                nome = input("Nome do contato para ser excluído: ")
+                self.agenda.excluir_contato(nome)
+                print("Contato excluído com seucesso!")
+
+            elif opcao == "4":
+                print("Saindo...")
+                break
+
+            else:
+                print("Opção inválida! Tente novamnete.")
