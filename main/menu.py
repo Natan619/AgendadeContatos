@@ -20,7 +20,6 @@ class Menu:
                 telefone = input("Telefone: ")
                 email = input("E-mail: ")
                 self.agenda.adicionar_contato(nome, telefone, email)
-                print("Contato adicionado com sucesso!")
 
             elif opcao == "2":
                 self.agenda.visualizar_contatos()

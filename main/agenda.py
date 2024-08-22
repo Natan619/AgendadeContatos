@@ -8,7 +8,14 @@ class AgendaContatos:
     def adicionar_contato(self, nome, telefone, email):
         """Adiciona um novo contato à agenda."""
         contato = Contato(nome, telefone, email)
-        self.contatos.append(contato)    
+        if contato.validar_email() and contato.validar_telefone():
+          self.contatos.append(contato) 
+          print("Contato adicionado com sucesso!") 
+        else:
+            if not contato.validar_email():
+             print("Erro: E-mail inválido")  
+            if not contato.validar_telefone():
+             print("Erro: Telefone inválido")  
 
     def visualizar_contatos(self):
         """Exibe todos os contatos da agenda"""
@@ -19,4 +26,8 @@ class AgendaContatos:
 
     def excluir_contato(self, nome):
         """Excluí contato com base no nome selecionado"""
-        self.contatos = [contato for contato in self.contatos if contato.nome != nome]
+        for contato in self.contatos:
+            if contato.nome == nome:
+                self.contatos.remove(contato)
+                return
+        print("Contato não encontrado")
