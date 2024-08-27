@@ -9,6 +9,7 @@ Este é um projeto simples de uma agenda de contatos desenvolvido em Python. A a
 - **Adicionar Contato**: Permite adicionar um novo contato à agenda.
 - **Visualizar Contatos**: Exibe todos os contatos armazenados na agenda.
 - **Excluir Contato**: Remove um contato da agenda pelo nome.
+- **Verifica Formato de e-mail e telefone corretos**: Adiciona a agenda somente contatos com e-mail e telefones em formatos padrão.
 
 ## Requisitos
 
