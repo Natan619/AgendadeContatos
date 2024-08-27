@@ -12,7 +12,7 @@ class Contato:
         return re.match(padrao_email, self.email) is not None
     
     def validar_telefone(self):
-        padrao_telefone = r'^\(\d{2}\) \d{4,5}-\d{4}$' 
+        padrao_telefone = r'^\d{11}$'
         return re.match(padrao_telefone, self.telefone) is not None
 
     def __str__(self):
