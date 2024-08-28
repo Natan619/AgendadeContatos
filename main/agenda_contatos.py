@@ -1,5 +1,7 @@
-from menu import Menu
+from tkinter import Tk
+from app import App  
 
 if __name__ == "__main__":
-    menu = Menu()
-    menu.exibir_menu()
+    root = Tk()
+    app = App(root)
+    root.mainloop()

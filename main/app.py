@@ -45,15 +45,11 @@ class App:
             messagebox.showinfo("Sucesso", "Contato adicionado com sucesso!")
 
     def visualizar_contatos(self):
-        contatos = self.agenda.contatos
+        contatos = self.agenda.visualizar_contatos()
         if not contatos:
             messagebox.showinfo("Contatos", "Nenhum contato encontrado.")
         else:
-            contatos_str = "\n".join([str(contato) for contato in contatos])
+            contatos_str = "\n".join([f"Nome: {contato[1]}, Telefone: {contato[2]}, Email: {contato[3]}" for contato in contatos])
             messagebox.showinfo("Contatos", contatos_str)
 
-# Iniciando a aplicação
-if __name__ == "__main__":
-    root = tk.Tk()
-    app = App(root)
-    root.mainloop()
+
